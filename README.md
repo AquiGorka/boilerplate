@@ -2,7 +2,7 @@
 
 Starting point for development
 
-### How to? WHere to?
+### How to? Where to?
 
 ```sh
 npm i
