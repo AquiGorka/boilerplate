@@ -1,4 +1,3 @@
-// webpack.config.js
 let path = require('path');
 let webpack = require('webpack');
 let ExtractTextPlugin = require("extract-text-webpack-plugin");

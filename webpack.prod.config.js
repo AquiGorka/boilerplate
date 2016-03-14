@@ -1,7 +1,7 @@
-var path              = require('path');
-var webpack           = require('webpack');
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+let path = require('path');
+let webpack = require('webpack');
+let ExtractTextPlugin = require("extract-text-webpack-plugin");
+let HtmlWebpackPlugin = require('html-webpack-plugin');
 let dir = 'build-prod';
 
 module.exports = {
