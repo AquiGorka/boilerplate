@@ -3,12 +3,6 @@
   "version": "0.0.1",
   "description": "Boilerplate",
   "main": "src/index.js",
-  "scripts": {
-    "watch": "webpack --progress --colors --watch",
-    "build": "webpack -p --progress --colors",
-    "start": "python -m SimpleHTTPServer",
-    "serve": "node server.js"
-  },
   "author": "Gorka",
   "license": "MIT",
   "dependencies": {
