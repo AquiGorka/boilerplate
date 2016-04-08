@@ -21,11 +21,11 @@ And then open up a browser to http://localhost:8080
 + react-router
 + babel
 + git
++ stylus
 
 
 ### Future Features
 
 + standardjs? lint?
 + init script (for titles, names and project specifics?)
-+ autoprefixer-loader@3.2.0: Please use postcss-loader instead of autoprefixer-loader
 + tests
