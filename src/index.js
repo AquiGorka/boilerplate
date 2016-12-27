@@ -1,21 +1,22 @@
-import React from 'react';
+import React from 'react'
 import { render } from 'react-dom'
-import { Router, Route, browserHistory, IndexRoute } from 'react-router';
-import App from './app.js';
-import Home from './sections/home/index.js';
+import { Router, Route, browserHistory, IndexRoute } from 'react-router'
+import App from './app.js'
+import Home from './sections/home/index.js'
 
-const Section = () => {return (<div>Section</div>)};
-const NotFound = () => {return (<div>404 Not Found</div>)};
+const Section = () => { return (<div>Section</div>) }
+const NotFound = () => { return (<div>404 Not Found</div>) }
 
 //
 const routes = (
-	<Route path="/" component={App}>
-		<IndexRoute component={Home} />
-		<Route path="section" component={Section} />
-		//
-    <Route path="*" component={NotFound} />
-	</Route>
-);
+  <Route path='/' component={App}>
+    <IndexRoute component={Home} />
+    <Route path='section' component={Section} />
+    //
+    <Route path='*' component={NotFound} />
+  </Route>
+)
 
 //
-document.addEventListener( 'DOMContentLoaded', () => render( <Router history={browserHistory} routes={routes} />, document.getElementById('root') ) );
+document.addEventListener('DOMContentLoaded',
+  () => render(<Router history={browserHistory} routes={routes} />, document.getElementById('root')))

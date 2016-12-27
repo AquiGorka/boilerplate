@@ -1,8 +1,8 @@
-let path = require('path');
-let webpack = require('webpack');
-let ExtractTextPlugin = require("extract-text-webpack-plugin");
-let HtmlWebpackPlugin = require('html-webpack-plugin');
-let dir = 'build-prod';
+import path from 'path'
+import webpack from 'webpack'
+import ExtractTextPlugin from 'extract-text-webpack-plugin'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
+const dir = 'build-prod'
 
 module.exports = {
   entry: ['./src/index.js'],
@@ -22,8 +22,8 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({ 'process.env': { 'NODE_ENV': JSON.stringify('production') } }),
-    new ExtractTextPlugin( 'css/styles.css', {allChunks: false }),
+    new ExtractTextPlugin('css/styles.css', { allChunks: false }),
     new webpack.optimize.UglifyJsPlugin({minimize: true}),
     new HtmlWebpackPlugin({ template: 'src/template/index.html', inject: false })
   ]
-};
+}

@@ -1,9 +1,9 @@
-let path = require('path');
-let webpack = require('webpack');
-let ExtractTextPlugin = require("extract-text-webpack-plugin");
-let HtmlWebpackPlugin = require('html-webpack-plugin');
-let PORT = 8080;
-let dir = 'build-dev/';
+import path from 'path'
+import webpack from 'webpack'
+import ExtractTextPlugin from 'extract-text-webpack-plugin'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
+const PORT = 8080
+const dir = 'build-dev/'
 
 module.exports = {
   contentBase: dir,
@@ -22,7 +22,7 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.js$/,
-      loaders: ['react-hot','babel'],
+      loaders: ['react-hot', 'babel'],
       include: path.join(__dirname, 'src')
     }, {
       test: /\.styl$/,
@@ -32,8 +32,8 @@ module.exports = {
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoErrorsPlugin(),
-    new ExtractTextPlugin( 'css/styles.css', { allChunks: false }),
+    new ExtractTextPlugin('css/styles.css', { allChunks: false }),
     new HtmlWebpackPlugin({ template: './src/template/index.html', inject: false })
   ]
-};
+}
 

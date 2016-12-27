@@ -6,7 +6,7 @@ Starting point for development
 
 ```sh
 npm i
-gulp
+npm run dev
 ```
 
 And then open up a browser to http://localhost:8080
@@ -22,10 +22,9 @@ And then open up a browser to http://localhost:8080
 + babel
 + git
 + stylus
-
++ standardjs
 
 ### Future Features
 
-+ standardjs? lint?
 + init script (for titles, names and project specifics?)
-+ tests
++ tests (jest? jasmine?)

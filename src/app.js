@@ -1,16 +1,12 @@
-import React from 'react';
-
-const styles = {
-	app: {},
-	section: {}
-};
+import React from 'react'
+import styles from './styles.styl'
 
 export default (props) => {
-	return (
-		<main style={styles.app}>
-			<section style={styles.section}>
-				{props.children}
-			</section>
-		</main>
-	);
-};
+  return (
+    <main className={styles.app}>
+      <section className={styles.section}>
+        {props.children}
+      </section>
+    </main>
+  )
+}
