@@ -8,15 +8,16 @@ const Section = () => { return (<div>Section</div>) }
 const NotFound = () => { return (<div>404 Not Found</div>) }
 
 //
-const routes = (
-  <Route path='/' component={App}>
-    <IndexRoute component={Home} />
-    <Route path='section' component={Section} />
-    //
-    <Route path='*' component={NotFound} />
-  </Route>
+const router = (
+  <Router history={browserHistory}>
+    <Route path='/' component={App}>
+      <IndexRoute component={Home} />
+      <Route path='section' component={Section} />
+      //
+      <Route path='*' component={NotFound} />
+    </Route>
+  </Router>
 )
 
-//
-document.addEventListener('DOMContentLoaded',
-  () => render(<Router history={browserHistory} routes={routes} />, document.getElementById('root')))
+document.addEventListener('DOMContentLoaded', () =>
+  render(router, document.getElementById('root')))
